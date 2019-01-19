@@ -68,7 +68,6 @@ public class ApiSession {
             do {
                 let decoder = JSONDecoder()
                 let result = try decoder.decode(T.Response.self, from: data)
-								print(data)
 
                 DispatchQueue.main.async {
                   closure(.success(result))
